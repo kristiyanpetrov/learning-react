@@ -18,9 +18,9 @@ class App extends Component {
     // Don't do this! this.state.persons[0].name = 'Kristiyan';
     this.setState({
       persons: [
-        {name: 'Kristiyan', age: 26},
-        {name: 'Susan', age: 29},
-        {name: 'Catherine', age: 28}
+        {id: 'dsa', name: 'Kristiyan', age: 26},
+        {id: 'asdads', name: 'Susan', age: 29},
+        {id: 'asdaswq', name: 'Catherine', age: 28}
       ]
     });
   };
@@ -65,7 +65,8 @@ class App extends Component {
              return <Person
                 click={() => this.deletePersonHandler(index)}
                 name={person.name}
-                age={person.age}/>
+                age={person.age}
+                key={person.id}/>
            })}
          </div>
       );
